@@ -90,7 +90,7 @@ function App(): JSX.Element {
 
             <main>
                 <div className='cards__wrapper'>
-                    <CatCard />
+                    {cats.map(cat => <CatCard />)}
                 </div>
             </main>
 
