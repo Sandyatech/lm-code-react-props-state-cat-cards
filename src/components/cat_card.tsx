@@ -116,12 +116,12 @@ const images = [
 const CatCard: React.FC<Cat> = (props) =>
     <div className="card">
         <h3 className="card__text card__header">{props.name}</h3>
-		<CatImage image={images[props.catIndex].image}
+		{(props.catIndex < images.length)&&(<CatImage image={images[props.catIndex].image}
 			altText={images[props.catIndex].altText}
 			licenceType={images[props.catIndex].licenceType}
 			licenceUrl={images[props.catIndex].licenceUrl}
 			attributionName={images[props.catIndex].attributionName}
-			attributionUrl={images[props.catIndex].attributionUrl} />
+			attributionUrl={images[props.catIndex].attributionUrl} />)}
         <p className="card__text">Species: {props.species}</p>
         <p className="card__text">Favourite Food(s): {props.favFoods}</p>
         <p className="card__text">Birth Year: {props.birthYear}</p>
