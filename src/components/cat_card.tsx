@@ -113,11 +113,12 @@ const images = [
         attributionUrl: 'https://www.flickr.com/people/x-oph/'
     }
 ];
-const CatCard: React.FC<Cat> = ({ name, species, favFoods, birthYear, catIndex }) => {
+const CatCard: React.FC<Cat> = ({name, species, favFoods, birthYear, catIndex }) => {
     return (
         <div className="card">
             <h3 className="card__text card__header">{name}</h3>
-            {(catIndex < images.length) && (<CatImage image={images[catIndex].image}
+            {(catIndex < images.length) && (<CatImage
+                image={images[catIndex].image}
                 altText={images[catIndex].altText}
                 licenceType={images[catIndex].licenceType}
                 licenceUrl={images[catIndex].licenceUrl}

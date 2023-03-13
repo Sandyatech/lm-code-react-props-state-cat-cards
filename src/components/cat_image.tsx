@@ -1,5 +1,6 @@
 // cat_image.tsx
 interface CatImageProps {
+    id?: string;
     image: string;
     altText: string;
     licenceType: string;
@@ -8,7 +9,7 @@ interface CatImageProps {
     attributionUrl?: string;
 }
 
-const CatImage: React.FC<CatImageProps> = ({ image, altText, licenceType, licenceUrl, attributionName, attributionUrl }) => {
+const CatImage: React.FC<CatImageProps> = ({ id, image, altText, licenceType, licenceUrl, attributionName, attributionUrl }) => {
     return (
         <>
 
